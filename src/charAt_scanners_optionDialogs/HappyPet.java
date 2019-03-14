@@ -14,24 +14,94 @@ String pet = JOptionPane.showInputDialog("What type of pet do you want?");
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			int task1 = JOptionPane.showOptionDialog(null, "Would you like to give your pet food?", "1", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Yes", "No", "Kill Pet" }, null);
 			
-			int task2 = JOptionPane.showOptionDialog(null, "Would you like to give your pet water?", "2", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Yes", "No", "Kill Pet" }, null);		
-
-			int task3 = JOptionPane.showOptionDialog(null, "Would you like to interact with your pet in a positive way?", "3", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Yes", "No", "Kill Pet" }, null);
+	for (int i = 0; i < 4000000; i++) {
+		int task1 = JOptionPane.showOptionDialog(null, "What would you like to do?", "1", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Feed Pet"," Give Pet Water", "Positivly Enteract With Pet", "Kill Pet" }, null);
+	
+		if(task1 == 0 ) {		
+			feed();	
+		}
+		if(task1 == 1 ) {		
+			water();	
+		}
+		if(task1 == 2 ) {		
+			Interact();	
+		}
+		if(task1 == 3 ) {		
+			kill();	
+		}
+		
+		if(happinessLevel >= 10) {
+			break;
+		}
+	
+	
+	}
+	
 			
-			int task4 = JOptionPane.showOptionDialog(null, "Would you like to give your pet a shower?", "4", 0, JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Yes", "No", "Kill Pet" }, null);
-			
+		
 			
 			
 			// 5. Use user input to call the appropriate method created in step 4.
 
-			// 6. If you determine the happiness level is large enough, tell the
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 
-	}
+	
 
 	// 4. Create methods to handle each of your user selections.
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 
 	//    and INCREMENT the pet's happiness Level.
+
+
+static void feed() {
+	
+	JOptionPane.showMessageDialog(null, "You succesfully fed your pet?");
+	
+	happinessLevel = happinessLevel + 1;
+
+}
+
+static void water() {
+	
+	JOptionPane.showMessageDialog(null, "You succesfully gave water to your pet?");
+	
+	happinessLevel = happinessLevel + 1;
+
+}
+static void Interact() {
+	
+	JOptionPane.showMessageDialog(null, "You interacted with your pet?");
+	
+	happinessLevel = happinessLevel + 1;
+
+}
+
+static void kill() {
+	
+	JOptionPane.showMessageDialog(null, "You succesfully killed your pet?");
+	
+	happinessLevel = happinessLevel - 5000000;
+
+}
+
+
+
+
+
 }
